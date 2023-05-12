@@ -239,9 +239,8 @@ def DPSK_Modulation(dmtype):
 
 
 def create_app():
-    from waitress import serve
     PORT = int(os.environ.get("PORT",8000))
-    serve(app, host="0.0.0.0", port=PORT)
+    app.run(host='0.0.0.0',port=PORT)
 
 if __name__ == "__main__":
     create_app()
