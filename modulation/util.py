@@ -11,7 +11,7 @@ def plot_graph(x,y,title,xlabel="Volts",ylabel="Frequncy",color="b",condition="s
     fig, ax = plt.subplots()
     fig = plt.figure(figsize=(20,3))
     plot_axis(fig,ax)
-    s = [1 for i in x]
+    s = [3 for i in x]
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
