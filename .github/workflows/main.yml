@@ -26,3 +26,20 @@ jobs:
         wait $!
     - name: print_ip 
       run: echo ${{ runner.ip }}
+  
+  tunneling:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up ngrok
+        run: |
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+          unzip ngrok-stable-linux-amd64.zip
+      - name: Start ngrok tunnel
+        run: |
+          ./ngrok http 5000 > /dev/null &
+          sleep 5
+      - name: Print ngrok URL
+        run: |
+          curl -s http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url'
