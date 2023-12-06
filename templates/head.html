@@ -7,8 +7,23 @@
     <title>AdComm</title>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="stylesheet" href="/static/AM.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/macro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    {% if include_files %}
+      {% for i in include_files %}
+      {% if i.endswith('css') %}
+          <link rel="stylesheet" href="{{url_for('static',filename=i)}}"/>
+        {%elif i.endswith('js')%}
+          <script type="text/javascript" defer href="{{url_for('static',filename=i)}}"></script>
+        {%else%}
+          {% with filename = i %}
+            {% include filename %}
+          {%endwith%}
+        {%endif%}
+      {%endfor%}
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />

@@ -30,6 +30,16 @@
             "theoryLink":"-",
             "pageLink":"/PM",
             "display":"none"
+        },
+        {
+            "title":"Computer Networks",
+            "descritption":"Computer networking refers to interconnected computing devices that can exchange data and share resources with each other. These networked devices use a system of rules, called communications protocols.",
+            "color":"#e6d850",
+            "image_link":"https://media.licdn.com/dms/image/D5612AQELr1hVEEnnTA/article-cover_image-shrink_720_1280/0/1678392658623?e=1707350400&v=beta&t=mJ3IgWWh0vYsUTkbhqtg-6FEHWBtdhzQAVFiSaEhyqA",
+            "hasTheory":"false",
+            "theoryLink":"-",
+            "demoLink":"-",
+            "pageLink":"/CN"
         }
     ],
     "AM":[
@@ -215,5 +225,70 @@
             "theoryLink":"-"
         }
 
+    ],
+    "CN":[
+        {
+            "title":"Stop and wait",
+            "descritption":"Stop-and-Wait is a basic flow control protocol in computer networks, where the sender sends one data frame and awaits acknowledgment from the receiver before proceeding. It ensures reliability by retransmitting in case of errors or timeouts.",
+            "image_link":"https://www.isi.edu/nsnam/DIRECTED_RESEARCH/DR_HYUNAH/D-Research/e-stop.gif",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/StopAndWait",
+            "theoryLink":"/theroy/CN/StopAndWait"
+        },
+        {
+            "title":"Go Back N",
+            "descritption":"Go-Back-N is an automatic repeat request (ARQ) protocol used in computer networks, allowing the sender to transmit multiple frames before receiving acknowledgment, and the receiver selectively acknowledges or requests retransmission of a specific frame upon detection of errors.",
+            "image_link":"https://static.javatpoint.com/tutorial/computer-network/images/go-back-n-arq9.png",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/GoBackN",
+            "theoryLink":"/theroy/CN/GoBackN"
+        },
+        {
+            "title":"Leaky Bucket",
+            "descritption":"The leaky bucket is a network traffic shaping algorithm that controls the rate at which data is sent or transmitted, smoothing out bursts of traffic by regulating the flow and ensuring a constant output rate.",
+            "image_link":"https://scaler.com/topics/images/leaky-bucket-2.webp",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/leakyBucket",
+            "theoryLink":"/theroy/CN/leakyBucket"
+        },
+        {
+            "title":"Exposed Node",
+            "descritption":"https://media.geeksforgeeks.org/wp-content/uploads/20230306163718/HiddenNode-300.jpg",
+            "image_link":"https://www.researchgate.net/profile/Emilia-Weyulu/publication/320012604/figure/fig1/AS:542282127298560@1506301542829/The-hidden-node-problem.png",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/exposedNode",
+            "theoryLink":"/theroy/CN/exposedNode"
+        },
+        {
+            "title":"Hidden Node",
+            "descritption":"a hidden node refers to a situation where two nodes are out of direct communication range with each other, leading to potential interference issues as they may simultaneously attempt to transmit data to a common third node.",
+            "image_link":"https://media.geeksforgeeks.org/wp-content/uploads/20230306163718/HiddenNode-300.jpg",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/hiddenNode",
+            "theoryLink":"/theroy/CN/hiddenNode"
+        },
+        {
+            "title":"CSMA-CD",
+            "descritption":"Carrier Sense Multiple Access with Collision Detection (CSMA/CD) is a network protocol used in Ethernet networks to manage access to the shared communication channel by allowing devices to listen for ongoing transmissions before attempting to transmit.",
+            "image_link":"https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Screenshots_2018/EN-CSMA-CD-collision-domain.jpg",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/CSMACD",
+            "theoryLink":"/theroy/CN/CSMACD"
+        },
+        {
+            "title":"CSMA-CA",
+            "descritption":"Carrier-sense multiple access with collision avoidance in computer networking, is a network multiple access method in which carrier sensing is used, but nodes attempt to avoid collisions by beginning transmission only after the channel is sensed to be idle.",
+            "image_link":"https://miro.medium.com/v2/resize:fit:1115/1*ggvImE_UOKA7s7dRSc6rcA.png",
+            "color":"#e6d850",
+            "hasTheory":"true",
+            "demoLink":"/CN/CSMACA",
+            "theoryLink":"/theroy/CN/CSMACA"
+        }
     ]
 }

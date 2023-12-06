@@ -4,12 +4,11 @@ from flask_cors import CORS
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+import os,re,json
 import base64
 from modulation import *
 from binascii import unhexlify
 import logging
-import json
 
 
 logger = logging.getLogger('waitress')
@@ -190,6 +189,22 @@ def DPSK_Modulation(dmtype):
 
 # ------------ End of Digital Modulation -------------
 
+# ------------ COMPUTER NETWORKS ---------------------
+
+@app.route('/CN',methods=["GET"])
+def CN_page():
+    f = open('./data.json')
+    data = json.load(f)["CN"]
+    return render_template('home.html',title="COMPUTER NETWORKS",data=data)
+
+@app.route('/CN/<algo_type>',methods=["GET"])
+def CN_algo_page(algo_type):
+    return render_template(f'CN/{camelCase(algo_type)}.html',title=algo_type,include_files=[f'css/{algo_type}.css',f'js/{algo_type}.js'])
+
+# ------------ End of Computer Networks --------------
+
+
+
 # ---------- Pulse Modulation ---------------------
 
 # @app.route('/PM',methods=['GET'])
@@ -235,8 +250,12 @@ def DPSK_Modulation(dmtype):
 
 #     return render_template('PM_graphs.html',pmtype=pmtype.upper(),title=title[pmtype], plots=plots)
 
-
-
+def camelCase(sentence):
+    sentence = re.sub(r'[^a-zA-Z0-9 ]', '', sentence)
+    words = sentence.split()
+    camel_cased_words = [words[0].lower()] + [word.capitalize() if i == 0 else word.lower() for i, word in enumerate(words[1:])]
+    camel_cased_sentence = ''.join(camel_cased_words)    
+    return camel_cased_sentence
 
 def create_app():
     PORT = int(os.environ.get("PORT",8000))

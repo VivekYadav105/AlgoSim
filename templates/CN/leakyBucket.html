@@ -1,0 +1,56 @@
+<html lang="en">
+    {% with include_files=include_files%}
+        {% include 'head.html' %}
+    {% endwith %}
+<body>
+    {% include 'nav.html'%}
+    <div id="root">
+        <div class="App">
+            <header class="App-header">
+                <div class="transmission-Info">
+                    Packet Transmission Info:<br>
+                    Packet Loss:&nbsp;<span id="packet-lost">0</span>
+                </div>
+                <div class="buttons">
+                    <div class="input-bar">
+                        <label>Transmission Rate</label>
+                        <input class="input" value="5" id="transmission-input">    
+                    </div>
+                    <div class="input-bar">
+                        <label>Data size</label>
+                        <input class="input" value="1500" id="Data-Size">
+                    </div>
+                    <div class="input-bar">
+                        <label>Data Left</label>
+                        <input class="input" value="1500" id="Data-left" disabled>
+                    </div>
+                    <!-- <div class="input-bar">
+                        <label>Bucket transmi...</label>
+                        <input class="input" value="2" id="bucket-transmission">
+                    </div> -->
+                    <div class="input-bar" id="start-wrapper">
+                        <label>start transmi...</label>
+                        <button class="input" id="start-simulation">start</button>
+                    </div>
+                    <div class="input-bar" id="stop-wrapper">
+                        <label>stop transmi...</label>
+                        <button class="input" id="stop-simulation">stop</button>
+                    </div>
+                </div>
+                <section class="simulation" style="height: auto;">
+                    <div class="leaky-bucket">
+                        <canvas class="sender-canvas"></canvas>
+                        <div class="sender-leaky-bucket">Sender</div>
+                        <div class="progress-bucket">
+                            <p class="text">current size <br/><span id="current-size">0</span> bits</p>
+                            <div class="progress" data-color="green" style="height: 0%;"></div>
+                        </div>
+                        <canvas class="reciever-canvas"></canvas>
+                        <div class="reciever-leaky-bucket">Reciever</div>
+                    </div>
+                </section>
+            </header>
+        </div>
+    </div>
+</body>
+</html>
