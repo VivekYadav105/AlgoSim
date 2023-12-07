@@ -233,8 +233,8 @@
             "image_link":"https://www.isi.edu/nsnam/DIRECTED_RESEARCH/DR_HYUNAH/D-Research/e-stop.gif",
             "color":"#e6d850",
             "hasTheory":"true",
-            "demoLink":"/CN/StopAndWait",
-            "theoryLink":"/theroy/CN/StopAndWait"
+            "demoLink":"/CN/stopAndWait",
+            "theoryLink":"/theroy/CN/stopAndWait"
         },
         {
             "title":"Go Back N",

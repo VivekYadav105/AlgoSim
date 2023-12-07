@@ -22,6 +22,8 @@ time_out_bar.addEventListener('change',(e)=>{
     console.log(time_out)
 })
 
+console.log("Hello world")
+
 class Packet{
     constructor(obj){
         this.type = obj.type;

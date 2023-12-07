@@ -15,7 +15,7 @@
       {% if i.endswith('css') %}
           <link rel="stylesheet" href="{{url_for('static',filename=i)}}"/>
         {%elif i.endswith('js')%}
-          <script type="text/javascript" defer href="{{url_for('static',filename=i)}}"></script>
+          <script type="text/javascript" defer src="{{url_for('static',filename=i)}}"></script>
         {%else%}
           {% with filename = i %}
             {% include filename %}
@@ -27,7 +27,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="/static/js/am.js" defer></script> 
     <style>
       .inputs{
         display: flex;
