@@ -15,8 +15,14 @@
 - **Frontend**: HTML, CSS, JavaScript
 
 ## Screenshots
-![Screenshot 1](link_to_screenshot_1)
-![Screenshot 2](link_to_screenshot_2)
+<div style="display:flex;flex-wrap:wrap">
+    <img src="https://github.com/VivekYadav105/AlgoSim/blob/main/static/images/screenshot_0.png?raw=true" style="object-fit:cover;width:49%;height:400px"></img>
+    <img src="https://github.com/VivekYadav105/AlgoSim/blob/main/static/images/screenshot_1.png?raw=true" style="object-fit:cover;width:49%;height:400px"></img>
+</div>
+<img src="https://github.com/VivekYadav105/AlgoSim/blob/main/static/images/screenshot_2.jpg.png?raw=true" style="object-fit:cover;height:400px"></img>
+<img src="https://github.com/VivekYadav105/AlgoSim/blob/main/static/images/screenshot_3.jpg.png?raw=true" style="object-fit:cover;height:400px"></img>    
+
+
 
 ## Installation
 
